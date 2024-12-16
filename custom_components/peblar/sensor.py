@@ -14,7 +14,12 @@ from homeassistant.components.sensor import (
     SensorStateClass,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import UnitOfElectricCurrent, UnitOfEnergy, UnitOfPower
+from homeassistant.const import (
+    UnitOfElectricCurrent,
+    UnitOfEnergy,
+    UnitOfPower,
+    UnitOfElectricPotential,
+)
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import StateType
@@ -63,14 +68,14 @@ SENSOR_TYPES: dict[str, PeblarSensorEntityDescription] = {
     CHARGER_CURRENT_PHASE1_KEY: PeblarSensorEntityDescription(
         key=CHARGER_CURRENT_PHASE1_KEY,
         translation_key=CHARGER_CURRENT_PHASE1_KEY,
-        native_unit_of_measurement=UnitOfPower.WATT,
-        device_class=SensorDeviceClass.POWER,
+        native_unit_of_measurement=UnitOfElectricCurrent.MILLIAMPERE,
+        device_class=SensorDeviceClass.CURRENT,
         state_class=SensorStateClass.MEASUREMENT,
     ),
     CHARGER_VOLTAGE_PHASE1_KEY: PeblarSensorEntityDescription(
         key=CHARGER_VOLTAGE_PHASE1_KEY,
         translation_key=CHARGER_VOLTAGE_PHASE1_KEY,
-        native_unit_of_measurement=UnitOfElectricCurrent.VOLT,
+        native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         device_class=SensorDeviceClass.VOLTAGE,
         state_class=SensorStateClass.MEASUREMENT,
     ),
@@ -84,14 +89,14 @@ SENSOR_TYPES: dict[str, PeblarSensorEntityDescription] = {
     CHARGER_CURRENT_PHASE2_KEY: PeblarSensorEntityDescription(
         key=CHARGER_CURRENT_PHASE2_KEY,
         translation_key=CHARGER_CURRENT_PHASE2_KEY,
-        native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
+        native_unit_of_measurement=UnitOfElectricCurrent.MILLIAMPERE,
         device_class=SensorDeviceClass.CURRENT,
         state_class=SensorStateClass.MEASUREMENT,
     ),
     CHARGER_VOLTAGE_PHASE2_KEY: PeblarSensorEntityDescription(
         key=CHARGER_VOLTAGE_PHASE2_KEY,
         translation_key=CHARGER_VOLTAGE_PHASE2_KEY,
-        native_unit_of_measurement=UnitOfElectricCurrent.VOLT,
+        native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         device_class=SensorDeviceClass.VOLTAGE,
         state_class=SensorStateClass.MEASUREMENT,
     ),
@@ -105,14 +110,14 @@ SENSOR_TYPES: dict[str, PeblarSensorEntityDescription] = {
     CHARGER_CURRENT_PHASE3_KEY: PeblarSensorEntityDescription(
         key=CHARGER_CURRENT_PHASE3_KEY,
         translation_key=CHARGER_CURRENT_PHASE3_KEY,
-        native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
+        native_unit_of_measurement=UnitOfElectricCurrent.MILLIAMPERE,
         device_class=SensorDeviceClass.CURRENT,
         state_class=SensorStateClass.MEASUREMENT,
     ),
     CHARGER_VOLTAGE_PHASE3_KEY: PeblarSensorEntityDescription(
         key=CHARGER_VOLTAGE_PHASE3_KEY,
         translation_key=CHARGER_VOLTAGE_PHASE3_KEY,
-        native_unit_of_measurement=UnitOfElectricCurrent.VOLT,
+        native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         device_class=SensorDeviceClass.VOLTAGE,
         state_class=SensorStateClass.MEASUREMENT,
     ),

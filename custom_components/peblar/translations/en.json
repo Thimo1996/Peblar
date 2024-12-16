@@ -16,6 +16,27 @@
                     "ip_address": "ip address",
                     "access_token": "access token"
                 }
+            }
+        }
+    },
+    "entity": {
+        "number": {
+            "ChargeCurrentLimit": {
+                "name": "Maximum charging current"
+            }
+        },
+        "sensor": {
+            "EnergyTotal": {
+                "name": "Total energy"
+            },
+            "EnergySession": {
+                "name": "Session energy"
+            },
+            "PowerTotal": {
+                "name": "Charging power"
+            },
+            "CurrentPhase1": {
+                "name": "Current Phase1"
             },
             "VoltagePhase1": {
                 "name": "Voltage Phase 1"
@@ -40,27 +61,6 @@
             },
             "PowerPhase3": {
                 "name": "Power Phase 3"
-        }
-    }
-    },
-    "entity": {
-        "number": {
-            "ChargeCurrentLimit": {
-                "name": "Maximum charging current"
-            }
-        },
-        "sensor": {
-            "EnergyTotal": {
-                "name": "Total energy"
-            },
-            "EnergySession": {
-                "name": "Session energy"
-            },
-            "PowerTotal": {
-                "name": "Charging power"
-            },
-            "CurrentPhase1": {
-                "name": "Current Phase1"
             }
         }
     }
