@@ -1,0 +1,10 @@
+{
+  "domain": "peblar",
+  "name": "Peblar",
+  "codeowners": ["@thimo1996"],
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/Eneco_Peblar",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "1.1.0"
+}
