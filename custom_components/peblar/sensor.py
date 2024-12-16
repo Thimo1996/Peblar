@@ -50,14 +50,14 @@ SENSOR_TYPES: dict[str, PeblarSensorEntityDescription] = {
         native_unit_of_measurement=UnitOfElectricCurrent.MILLIAMPERE,
         device_class=SensorDeviceClass.CURRENT,
         state_class=SensorStateClass.MEASUREMENT,
-    ),
-    last_reset=datetime(2023, 1, 1, 0, 0, 0),  # Example last reset time
+        last_reset=datetime(2023, 1, 1, 0, 0, 0),  # Example last reset time
     CHARGER_TOTAL_ENERGY_KEY: PeblarSensorEntityDescription(
         key=CHARGER_TOTAL_ENERGY_KEY,
         translation_key=CHARGER_TOTAL_ENERGY_KEY,
         native_unit_of_measurement=UnitOfEnergy.WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
+        last_reset=datetime(2023, 1, 1, 0, 0, 0),  # Example last reset time
     ),
     CHARGER_SESSION_ENERGY_KEY: PeblarSensorEntityDescription(
         key=CHARGER_SESSION_ENERGY_KEY,
