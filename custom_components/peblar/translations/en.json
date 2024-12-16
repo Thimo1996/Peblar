@@ -1,0 +1,43 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured",
+            "reauth_successful": "Re-authentication was successful"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_auth": "Invalid authentication",
+            "reauth_invalid": "Re-authentication failed; Token not valid",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "ip_address": "ip address",
+                    "access_token": "access token"
+                }
+            }
+        }
+    },
+    "entity": {
+        "number": {
+            "ChargeCurrentLimit": {
+                "name": "Maximum charging current"
+            }
+        },
+        "sensor": {
+            "EnergyTotal": {
+                "name": "Total energy"
+            },
+            "EnergySession": {
+                "name": "Session energy"
+            },
+            "PowerTotal": {
+                "name": "Charging power"
+            },
+            "CurrentPhase1": {
+                "name": "Current Phase1"
+            }
+        }
+    }
+}
