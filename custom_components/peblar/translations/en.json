@@ -16,7 +16,30 @@
                     "ip_address": "ip address",
                     "access_token": "access token"
                 }
-            }
+            },
+            "VoltagePhase1": {
+                "name": "Voltage Phase 1"
+            },
+            "PowerPhase1": {
+                "name": "Power Phase 1"
+            },
+            "CurrentPhase2": {
+                "name": "Current Phase 2"
+            },
+            "VoltagePhase2": {
+                "name": "Voltage Phase 2"
+            },
+            "PowerPhase2": {
+                "name": "Power Phase 2"
+            },
+            "CurrentPhase3": {
+                "name": "Current Phase 3"
+            },
+            "VoltagePhase3": {
+                "name": "Voltage Phase 3"
+            },
+            "PowerPhase3": {
+                "name": "Power Phase 3"
         }
     },
     "entity": {
