@@ -41,6 +41,7 @@
             "PowerPhase3": {
                 "name": "Power Phase 3"
         }
+    }
     },
     "entity": {
         "number": {
