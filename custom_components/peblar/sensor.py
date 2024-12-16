@@ -50,7 +50,6 @@ SENSOR_TYPES: dict[str, PeblarSensorEntityDescription] = {
         native_unit_of_measurement=UnitOfElectricCurrent.MILLIAMPERE,
         device_class=SensorDeviceClass.CURRENT,
         state_class=SensorStateClass.MEASUREMENT,
-        last_reset=datetime(2023, 1, 1, 0, 0, 0),  # Example last reset time
     ),
     CHARGER_TOTAL_ENERGY_KEY: PeblarSensorEntityDescription(
         key=CHARGER_TOTAL_ENERGY_KEY,
@@ -58,7 +57,6 @@ SENSOR_TYPES: dict[str, PeblarSensorEntityDescription] = {
         native_unit_of_measurement=UnitOfEnergy.WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
-        last_reset=datetime(2023, 1, 1, 0, 0, 0),  # Example last reset time
     ),
     CHARGER_SESSION_ENERGY_KEY: PeblarSensorEntityDescription(
         key=CHARGER_SESSION_ENERGY_KEY,
@@ -108,9 +106,6 @@ class PeblarSensor(PeblarEntity, SensorEntity):
         )
 
     @property
-    def last_reset(self) -> datetime | None:
-        """Return the last reset time of the sensor."""
-        return self.entity_description.last_reset
     def native_value(self) -> StateType:
         """Return the state of the sensor. Round the value when it, and the precision property are not None."""
         if (
