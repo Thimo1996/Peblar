@@ -1,11 +1,11 @@
 {
-  "domain": "peblar",
-  "name": "Peblar",
   "codeowners": ["@thimo1996"],
   "config_flow": true,
   "documentation": "https://github.com/Thimo1996/Peblar",
-  "issue_tracker": "https://github.com/Thimo1996/Peblar/issues",
+  "domain": "peblar",
   "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Thimo1996/Peblar/issues",
+  "name": "Peblar",
   "requirements": [],
   "version": "1.1.0"
 }
