@@ -72,8 +72,10 @@ class PeblarCoordinator(DataUpdateCoordinator[dict[str, Any]]):
     def _get_data(self) -> dict[str, Any]:
         """Get new sensor data for Peblar component."""
         data: dict[str, Any] = self._peblar.getChargerData()
+        # Convert all keys to lowercase
+        data = {k.lower(): v for k, v in data.items()}
         data[CHARGER_CP_STATE_DESCRIPTION_KEY] = CHARGER_STATUS.get(
-            data[CHARGER_CP_STATE_KEY], ChargerStatus.UNKNOWN
+            data[CHARGER_CP_STATE_KEY.lower()], ChargerStatus.UNKNOWN
         )
         return data
 
