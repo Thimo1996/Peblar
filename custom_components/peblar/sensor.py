@@ -39,6 +39,8 @@ from .const import (
     CHARGER_CURRENT_PHASE3_KEY,
     CHARGER_VOLTAGE_PHASE3_KEY,
     CHARGER_POWER_PHASE3_KEY,
+    CHARGER_CP_STATE_DESCRIPTION_KEY,
+    CHARGER_LIMIT_SOURCE_DESCRIPTION_KEY,
     DOMAIN,
 )
 from .coordinator import PeblarCoordinator
@@ -64,6 +66,14 @@ SENSOR_TYPES: dict[str, PeblarSensorEntityDescription] = {
         native_unit_of_measurement=UnitOfElectricCurrent.MILLIAMPERE,
         device_class=SensorDeviceClass.CURRENT,
         state_class=SensorStateClass.MEASUREMENT,
+    ),
+    CHARGER_CP_STATE_DESCRIPTION_KEY: PeblarSensorEntityDescription(
+        key=CHARGER_CP_STATE_DESCRIPTION_KEY,
+        translation_key=CHARGER_CP_STATE_DESCRIPTION_KEY,
+    ),
+    CHARGER_LIMIT_SOURCE_DESCRIPTION_KEY: PeblarSensorEntityDescription(
+        key=CHARGER_LIMIT_SOURCE_DESCRIPTION_KEY,
+        translation_key=CHARGER_LIMIT_SOURCE_DESCRIPTION_KEY,
     ),
     CHARGER_CURRENT_PHASE1_KEY: PeblarSensorEntityDescription(
         key=CHARGER_CURRENT_PHASE1_KEY,

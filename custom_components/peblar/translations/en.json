@@ -29,6 +29,12 @@
             "EnergyTotal": {
                 "name": "Total energy"
             },
+            "ChargeCurrentLimitSource": {
+                "name": "Charging current limit source"
+            },
+            "ChargeStateDescription": {
+                "name": "Charging state"
+            },
             "EnergySession": {
                 "name": "Session energy"
             },

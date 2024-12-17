@@ -12,10 +12,28 @@ from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
-from .const import CHARGER_MAX_CHARGING_CURRENT_KEY, DOMAIN, UPDATE_INTERVAL
+from .const import (
+    CHARGER_CP_STATE_DESCRIPTION_KEY,
+    CHARGER_CP_STATE_KEY,
+    DOMAIN,
+    UPDATE_INTERVAL,
+    ChargerStatus,
+)
+
 from .peblar import Peblar
 
 _LOGGER = logging.getLogger(__name__)
+
+CHARGER_STATUS: dict[str, ChargerStatus] = {
+    "State A": "No EV connected",
+    "State B": "EV connected but suspended",
+    "State C": "EV connected and charging",
+    "State D": "Same as C but ventilation requested",
+    "State E": "Error, short to PE or powered off",
+    "State F": "Fault",
+    "State I": "Invalid CP level measured",
+    "State U": "Unknown",
+}
 
 
 def _validate(peblar: Peblar) -> None:
@@ -54,7 +72,9 @@ class PeblarCoordinator(DataUpdateCoordinator[dict[str, Any]]):
     def _get_data(self) -> dict[str, Any]:
         """Get new sensor data for Peblar component."""
         data: dict[str, Any] = self._peblar.getChargerData()
-        data[CHARGER_MAX_CHARGING_CURRENT_KEY] = data[CHARGER_MAX_CHARGING_CURRENT_KEY]
+        data[CHARGER_CP_STATE_DESCRIPTION_KEY] = CHARGER_STATUS.get(
+            data[CHARGER_CP_STATE_KEY], ChargerStatus.UNKNOWN
+        )
         return data
 
     async def _async_update_data(self) -> dict[str, Any]:
