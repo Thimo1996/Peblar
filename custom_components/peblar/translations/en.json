@@ -21,51 +21,51 @@
     },
     "entity": {
         "number": {
-            "ChargeCurrentLimit": {
+            "chargecurrentlimit": {
                 "name": "Maximum charging current"
             }
         },
         "sensor": {
-            "EnergyTotal": {
+            "energytotal": {
                 "name": "Total energy"
             },
-            "ChargeCurrentLimitSource": {
+            "chargecurrentlimitsource": {
                 "name": "Charging current limit source"
             },
-            "ChargeStateDescription": {
+            "chargestatedescription": {
                 "name": "Charging state"
             },
-            "EnergySession": {
+            "energysession": {
                 "name": "Session energy"
             },
-            "PowerTotal": {
+            "powertotal": {
                 "name": "Charging power"
             },
-            "CurrentPhase1": {
+            "currentphase1": {
                 "name": "Current Phase1"
             },
-            "VoltagePhase1": {
+            "voltagephase1": {
                 "name": "Voltage Phase 1"
             },
-            "PowerPhase1": {
+            "powerphase1": {
                 "name": "Power Phase 1"
             },
-            "CurrentPhase2": {
+            "currentphase2": {
                 "name": "Current Phase 2"
             },
-            "VoltagePhase2": {
+            "voltagephase2": {
                 "name": "Voltage Phase 2"
             },
-            "PowerPhase2": {
+            "powerphase2": {
                 "name": "Power Phase 2"
             },
-            "CurrentPhase3": {
+            "currentphase3": {
                 "name": "Current Phase 3"
             },
-            "VoltagePhase3": {
+            "voltagephase3": {
                 "name": "Voltage Phase 3"
             },
-            "PowerPhase3": {
+            "powerphase3": {
                 "name": "Power Phase 3"
             }
         }
